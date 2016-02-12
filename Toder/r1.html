@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<script language=JavaScript> 
+var tim;
+      
+        var min = 30;
+        var sec = 60;
+        var str1="You started your Exam at ";
+	
+        var f = new Date();
+        function f1() {
+            f2(); 
+       var hrs=f.getHours();
+	var mns=f.getMinutes();
+	str1=str1.concat(hrs);
+	str1=str1.concat(":");
+	str1=str1.concat(mns);
+document.getElementById("starttime").innerHTML = "<br><br><br><br><br><br>"+str1.fontsize(6).fontcolor("white");
+             
+          
+        }
+	
+        function f2() {
+            if (parseInt(sec) > 0) {
+                sec = parseInt(sec) - 1;
+	var m=min-1;
+	var str2="Your Time Left  is :";
+	str2=str2.concat(m);
+	str2=str2.concat(" Minutes");
+	str2=str2.concat(sec);
+	str2=str2.concat(" Seconds");
+
+                document.getElementById("showtime").innerHTML = str2.fontsize(6).fontcolor("white");
+                tim = setTimeout("f2()", 1000);
+            }
+            else {
+                if (parseInt(sec) == 0) {
+                    min = parseInt(min) - 1;
+                    if (parseInt(min) == 0) {
+                        clearTimeout(tim);
+
+
+
+
+
+
+
+
+
+
+                        
+               
+	}
+                    else {
+                        sec = 60;
+		var p=min-1;
+		
+                        document.getElementById("showtime").innerHTML = "Your Time Left   is :" + p + " Minutes ," + sec + " Seconds";
+                        tim = setTimeout("f2()", 1000);
+                    }
+                }
+               }
+            }
+
+   
+
+
+
+
+var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") 
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+
+document.onkeydown=function(e)
+{
+if(e.which == 17)
+isCtrl=true;
+if((e.which == 85) || (e.which == 67) && isCtrl == true)
+{
+// alert(‘Keyboard shortcuts are cool!’);
+return false;
+}
+}
+
+var score=0;
+function myFunction() {
+    var x;
+    if(document.getElementById("a1").checked==true)
+    score=score+1;
+if(document.getElementById("a3").checked==true)
+    score=score+1;
+if(document.getElementById("b1").checked==true)
+    score=score+1;
+if(document.getElementById("b2").checked==true)
+    score=score+1;
+if(document.getElementById("c1").checked==true)
+    score=score+1;
+ if(document.getElementById("c2").checked==true)
+    score=score+1;
+if(document.getElementById("c4").checked==true)
+    score=score+1;
+if(document.getElementById("d1").checked==true)
+    score=score+1;
+if(document.getElementById("e1").checked==true)
+    score=score+1;
+if(document.getElementById("d2").checked==true)
+    score=score+1;
+if(document.getElementById("d4").checked==true)
+    score=score+1;
+if(document.getElementById("e4").checked==true)
+    score=score+1;
+if(document.getElementById("f3").checked==true)
+    score=score+1;
+if(document.getElementById("f2").checked==true)
+    score=score+1;	
+if(document.getElementById("g2").checked==true)
+    score=score+1;
+if(document.getElementById("h2").checked==true)
+    score=score+1;
+if(document.getElementById("i2").checked==true)
+    score=score+1;
+if(document.getElementById("j2").checked==true)
+    score=score+1;
+if(document.getElementById("k2").checked==true)
+    score=score+1;	
+if(document.getElementById("k3").checked==true)
+    score=score+1;	
+
+
+    //document.getElementById("demo").innerHTML = score ;
+if(score>=8)
+{
+alert("Congratulations, You cleared this round");
+var test = +score;
+ document.location.href ="between.html?"+test;
+
+ 
+}
+else
+{
+alert("Sorry... You couldn't clear this level...");
+var test = +score;
+ document.location.href ="between.html?"+test;
+ } 
+
+} 
+    function preventBack(){window.history.forward();}
+ setTimeout("preventBack()", 0);			
+  window.onunload=function(){null};
+
+
+</script>
+<title>ROUND 1</title>
+
+</head>
+<body onload="f1()" style="margin-right: 490px; margin-left: 120px;>
+
+								
+<form id="form1" runat="server">
+      <table width="100%" align="center">
+        <tr>
+          <td colspan="2">
+            
+          </td>
+        </tr>
+        <tr>
+          <td>
+<h2>&emsp;&emsp;&emsp;&emsp;&emsp;<u>ROUND 1</u></h2>
+            <div id="starttime"></div><br />
+            <div id="endtime"></div><br />
+            <div id="showtime"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+             
+              <br />
+            
+              
+          </td>
+         
+        </tr>
+      </table>
+      <br />
+   
+ 
+    
+    </form>	
+
+
+
+<form name="myform" >
+<link rel="stylesheet" href="index.css" type="text/css" media="all">
+
+
+<link rel="stylesheet" href="but.css" type="text/css" media="all">
+
+
+<div class="nav">
+Ques1) Which of the following can be implemented using queues?<br>
+<input type="radio" id="a1"  name="group1"  value="1"  >
+Radix Sort<br>
+ <input type="radio" id="a1"  name="group1"  value="2" >Quick Sort<br>
+<input type="radio" id="a1"  name="group1" value="3" >Depth First Search  <br>
+<input type="radio" id="a1" name="group1"   value="4">Recursion<br><br>
+
+Ques2)Suppose T(n) = 2T(n/2) + n, T(0) = T(1) = 1<br>
+Which one of the following is false?<br>
+<input type="radio" id="a1" name="g1" value="1">T(n)=O(n^2)<br>
+ <input type="radio" id="a2" name="g1" value="2">T(n)=theta(nLogn)<br>
+<input type="radio" id="a3" name="g1" value="3">T(n)=Omega(n^2) <br>
+<input type="radio" id="a4" name="g1" value="4">T(n)=O(nLogn)<br><br>
+
+Ques3)A program P reads in 500 integers in the range [0..100] representing the scores of 500 students. It then prints the frequency of each score above 50. What would be the best way for P to store the frequencies?<br>
+<input type="radio" id="b1" name="g2" value="1" >An array of 50 numbers<br>
+ <input type="radio" id="a1" name="g2" value="2">An array 100 numbers<br>
+<input type="radio" id="a1" name="g2" value="3">An array of 500 numbers <br>
+<input type="radio" id="a1" name="g2" value="4" >A dynamically allocated array of 550 numbers<br><br>
+
+Ques4)A Priority-Queue is implemented as a Max-Heap. Initially, it has 5 elements. The level-order traversal of the heap is given below:
+10, 8, 5, 3, 2
+Two new elements ”1‘ and ”7‘ are inserted in the heap in that order. The level-order traversal of the heap after the insertion of the elements is:
+<br>
+<input type="radio" id="a1" name="g2" value="1" unchecked >10, 8, 7, 5, 3, 2, 1<br>
+ <input type="radio" id="a1" name="g2" value="2" unchecked >10, 8, 7, 2, 3, 1, 5<br>
+<input type="radio" id="b2"  name="g2" value="3"unchecked >10, 8, 7, 3, 2, 1, 5 <br>
+<input type="radio" id="a1" name="g2" value="4" unchecked >10, 1, 3, 5, 2, 8, 7<br><br>
+
+Ques5)What is the number of swaps required to sort n elements using selection sort, in the worst case?<br>
+<input type="radio" id="c1" name="g3" value="1" unchecked >theta(n)<br>
+ <input type="radio" id="a1" name="g3" value="2" unchecked >theta(nlogn)<br>
+<input type="radio" id="a1" name="g3" value="3" unchecked >theta(n^2) <br>
+<input type="radio" id="a1" name="g3" value="4" unchecked >O(logn)<br><br>
+
+Ques6)How many distinct binary search trees can be created out of 4 distinct keys?<br>
+<input type="radio" id="a1" name="g4" value="1" unchecked >5<br>
+ <input type="radio" id="c2" name="g4" value="2" unchecked >14<br>
+<input type="radio" id="a1" name="g4" value="3" unchecked >24 <br>
+<input type="radio" id="a1" name="g4" value="4"  unchecked >42<br><br>
+
+Ques7)The time complexity of computing the transitive closure of a binary relation on a set of n elements is known to be:<br>
+<input type="radio" id="a1" name="g5" value="1"  unchecked >O(n^2)<br>
+ <input type="radio" id="c2"  name="g5" value="2" unchecked >O(n^3/2)<br>
+<input type="radio" id="a1"  name="g5" value="3" unchecked >O(n)<br>
+<input type="radio" id="c4" name="g5" value="4"  unchecked >O(n^3)<br><br>
+
+Ques8)To implement Dijkstra’s shortest path algorithm on unweighted graphs so that it runs in linear time, the data structure to be used is:<br>
+<input type="radio" id="d1" name="g6" value="1"  unchecked >Queues<br>
+ <input type="radio" id="a1" name="g6" value="2"  unchecked >Stacks<br>
+<input type="radio" id="a1"  name="g6" value="3" unchecked >Vectors<br>
+<input type="radio" id="a1"  name="g6" value="4" unchecked >B-Tree<br><br>
+
+Ques9)In quick sort, for sorting n elements, the (n/4)th smallest element is selected as pivot using an O(n) time algorithm. What is the worst case time complexity of the quick sort?<br>
+<input type="radio" id="e1" name="g7" value="1"  unchecked >O(nlogn)<br>
+ <input type="radio" id="a1" name="g7" value="2"  unchecked >O(.75nlog.75n)<br>
+<input type="radio" id="a1"  name="g7" value="3" unchecked >O(n^2)<br>
+<input type="radio" id="a1"  name="g7" value="4" unchecked >O(n^3/4)<br><br>
+
+Ques10)What is the maximum height of any AVL-tree with 7 nodes? Assume that the height of a tree with a single node is 0.<br>
+<input type="radio" id="a1" name="g8" value="1"  unchecked >2<br>
+ <input type="radio" id="d2" name="g8" value="2"  unchecked >3<br>
+<input type="radio" id="a1" name="g8" value="3"  unchecked >4<br>
+<input type="radio" id="a1" name="g8" value="4"  unchecked >5<br><br>
+
+
+Ques11)How many undirected graphs (not necessarily connected) can be constructed out of a given set V= {V 1, V 2,…V n} of n vertices ?<br>
+<input type="radio" id="a1" name="g9" value="1"  unchecked >n<br>
+<input type="radio" id="a1"name="g9" value="2"  unchecked >n(n-l)/2<br>
+<input type="radio" id="a1" name="g9" value="3"  unchecked >n!<br>
+<input type="radio" id="d4" name="g9" value="4"  unchecked >2^(n(n-1)/2)<br><br>
+
+
+Ques12)In a heap with n elements with the smallest element at the root, the 7th smallest element can be found in time:<br>
+<input type="radio" id="a1" name="g10" value="1"  unchecked >theta(nlogn)<br>
+<input type="radio" id="a1" name="g10" value="2"  unchecked >theta(logn)<br>
+<input type="radio" id="a1"  name="g10" value="3" unchecked >theta(n^2)<br>
+<input type="radio" id="e4"  name="g10" value="4" unchecked> theta(1)<br><br>
+
+Ques13)Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?<br>
+<input type="radio" id="a1"  name="g11" value="1" unchecked >7 5 1 0 3 2 4 6 8 9<br>
+<input type="radio" id="a1" name="g11" value="2"  unchecked >0 2 4 3 1 6 5 9 8 7<br>
+<input type="radio" id="f3" name="g11" value="3"  unchecked >0 1 2 3 4 5 6 7 8 9<br>
+<input type="radio" id="a1" name="g11" value="4"  unchecked> 9 7 6 5 3 2 1 0 4 8<br><br>
+
+Ques14)In an unweighted, undirected connected graph, the shortest path from a node S to every other node is computed most efficiently, in terms of time complexity by:<br>
+<input type="radio" id="a1" name="g12" value="1"  unchecked >Djkstra's Algorithm starting from S<br>
+<input type="radio" id="f2" name="g12" value="2"  unchecked >BFS starting from S<br>
+<input type="radio" id="a1" name="g12" value="3"  unchecked >Warshall's Algorithm<br>
+<input type="radio" id="a1"  name="g12" value="4" unchecked> DfS staring from S<br><br>
+ 
+Ques15)The time required for best case in the search operation of the binary tree:<br>
+<input type="radio" id="a1" name="g13" value="1"  unchecked >O(nlogn)<br>
+<input type="radio" id="g2"  name="g13" value="2" unchecked >O(logn)<br>
+<input type="radio" id="a1"  name="g13" value="3" unchecked >O(n)<br>
+<input type="radio" id="a1"  name="g13" value="4" unchecked> O(n/2)<br><br>
+
+Ques16)Can linked list be implemented using arrays?<br>
+<input type="radio" id="h2" name="g14" value="1"  unchecked >Yes<br>
+<input type="radio" id="a1"  name="g14" value="2" unchecked >No<br>
+
+Ques17)Which of the following orders is inorder traversal:<br>
+<input type="radio" id="a1"  name="g15" value="1" unchecked >Root->right subtree->left subtree<br>
+<input type="radio" id="i2" name="g15" value="2"  unchecked >Root->left subtree->right subtree<br>
+<input type="radio" id="a1"  name="g15" value="3" unchecked >Left subtree->root->right subtree<br>
+<input type="radio" id="a1" name="g15" value="4" unchecked> Left subtree->Right Subtree->root<br><br>
+
+Ques18)Items in a priority queue are entered in:<br>
+<input type="radio" id="a1" name="g16" value="1"  unchecked >Order of priority<br>
+<input type="radio" id="j2" name="g16" value="2"  unchecked >Random<br>
+<input type="radio" id="a1" name="g16" value="3"  unchecked >As and when they come<br>
+<input type="radio" id="a1" name="g16" value="4"  unchecked> Sorted Order(Increasing or Decreasing)<br><br>
+
+Ques19)In ______trees, the heights of two child subtrees differ by at most 1:<br>
+<input type="radio" id="a1" name="g17" value="1"  unchecked >Binary Trees<br>
+<input type="radio" id="k2" name="g17" value="2"  unchecked >AVL Trees<br>
+<input type="radio" id="a1"  name="g17" value="3" unchecked >Splay Tree<br>
+<input type="radio" id="a1"  name="g17" value="4" unchecked> Red-Black Tree<br><br>
+
+Ques20)AVL trees have a faster:<br>
+<input type="radio" id="a1" name="g18" value="1"  unchecked >Insertion<br>
+<input type="radio" id="a1"  name="g18" value="2" unchecked >Deletion<br>
+<input type="radio" id="k3"  name="g18" value="3" unchecked >Retrieval<br>
+<input type="radio" id="a1" name="g18" value="4" unchecked> Traversal<br><br>
+
+
+
+
+
+
+
+</div></form>
+
+
+
+
+
+<br><a href="between.html"><button onclick="myFunction()" class="btn">SUBMIT</button></a></br>
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="cookie.js"></script>
+	
+</head>
+<body>
+    <input type="text" id="text1" name="text1" />
+
+<script>
+
+
+
+    window.onload = function() {
+        document.getElementById("text1").onchange = function() {
+                                                  // ^ use onkeyup if you want this to occur as you type
+            setCookie("shared", this.value, 1);
+            alert('oK, val changed so lets check it');              
+        };
+    };
+</script>
+
+
+
+
+</body>
+
+
+</html>

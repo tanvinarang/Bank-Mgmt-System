@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Coding Event</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+
+<style type="text/css">
+.bg {behavior:url(js/PIE.htc)}
+</style>
+
+<script>
+var message = "function disabled"; 
+	function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ 	alert(message); return false; } 
+	if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { 	alert(message); 	return false; } } 
+	document.onmousedown = rtclickcheck;
+function click() { if (event.button==2) { alert('No right clicks...'); }}
+
+document.onkeydown = function() {    
+    switch (event.keyCode) { 
+        case 116 : //F5 button
+            event.returnValue = false;
+            event.keyCode = 0;
+            return false; 
+        case 82 : //R button
+            if (event.ctrlKey) { 
+                event.returnValue = false; 
+                event.keyCode = 0;  
+                return false; 
+            } 
+    }
+}
+
+function pass()
+{
+var password = "letmein"
+
+ var x = prompt("Enter in the password"," ");
+
+ if (x.toLowerCase() == password) {
+ 
+window.location.href='First.html';
+ }
+ else {
+while (x!= password)
+{
+alert("Wrong Password...");
+ var x = prompt("Enter in the password"," ")
+
+}}}
+
+ //function preventBack(){window.history.forward();}
+  //setTimeout("preventBack()", 0);			
+ // window.onunload=function(){null};
+
+
+</script>
+
+ <body background="bg5.jpg" >
+
+
+    
+
+
+
+<div class="main">
+<!-- header -->
+	<header>
+		<div class="wrapper">
+			<nav>
+				<ul id="menu">
+				</ul>
+			</nav>
+		</div>
+			</header><div class="ic"></div>
+
+	<section id="content">
+		<div class="wrapper">
+			<article class="col1">
+				
+				<div class="pad_left1 pad_bot1">
+    
+					<div class="wrapper img1">
+
+</div>
+					
+<div class="pad">
+					&emsp;<u> INSTRUCTIONS</u></div>
+				
+<div class ="nav">
+<ul>
+<li> THIS SYSTEM IS AUTOMATED, IF YOU FACE ANY PROBLEMS, <br><br>CONTACT YOUR COORDINATORS.<br><br></li>
+<li>PASSWORDS WILL BE GIVEN TO YOU BEFORE START <br><br>OF EACH LEVEL/ROUND.<br><br></li>
+
+<li>TIMERS WILL BE PRESENT ON THE SCREEN, <br><br>CHECK FOR IT REGULARLY. :)<br><br></li>
+<li>MAKE SURE YOU DON'T CLOSE THE BROWSER WINDOW.<br><br></li>
+<li>MAKE SURE THE COORDINATORS NOTE YOUR <br><br>SCORE FOR EVERY ROUND.<br><br></li>
+<li>IF YOU ARE CAUGHT IN ANY ATTEMPT IN CHEATING OR ANY <br><br>OTHER UNACCEPTABLE ACTIVITY, YOU SHALL BE DISQUALIFIED.<br><br></li>
+<li> ALL THE VERY BEST FOR YOUR TEST.</li></ul>
+</div>
+
+
+
+<br><br>&emsp;&emsp;<a href="rfinal.html" class="btn">START TEST</a><br><br><br><br><br><br>
+
+
+ 
+
+						<div class="wrapper">
+							<div class="cols"> 
+
+
+							</div>
+							<div class="cols pad_left2">
+	
+						<div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
